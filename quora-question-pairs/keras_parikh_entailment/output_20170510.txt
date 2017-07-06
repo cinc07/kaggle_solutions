@@ -1,0 +1,24 @@
+python keras_parikh_entailment/ train /cinc/data/snli/train/snli_1.0_train.jsonl /cinc/data/snli/dev/snli_1.0_dev.jsonl
+
+Using Theano backend.
+WARNING (theano.sandbox.cuda): The cuda backend is deprecated and will be removed in the next release (v0.10).  Please switch to the gpuarray backend. You can get more information about how to switch at this URL:
+ https://github.com/Theano/Theano/wiki/Converting-to-the-new-gpu-back-end%28gpuarray%29
+
+Using gpu device 0: Tesla K80 (CNMeM is disabled, cuDNN 5103)
+Loading spaCy
+Compiling network
+Processing texts...
+{u'tree_truncate': False, u'dropout': 0.2, u'batch_size': 100, u'lr': 0.001, u'nr_epoch': 5, u'gru_encode': False}
+Train on 549367 samples, validate on 9842 samples
+Epoch 1/5
+549367/549367 [==============================] - 692s - loss: 0.7691 - acc: 0.6641 - val_loss: 0.6623 - val_acc: 0.7260
+Epoch 2/5
+549367/549367 [==============================] - 691s - loss: 0.6697 - acc: 0.7214 - val_loss: 0.5889 - val_acc: 0.7578
+Epoch 3/5
+549367/549367 [==============================] - 694s - loss: 0.6467 - acc: 0.7325 - val_loss: 0.5914 - val_acc: 0.7619
+Epoch 4/5
+549367/549367 [==============================] - 690s - loss: 0.6323 - acc: 0.7400 - val_loss: 0.5794 - val_acc: 0.7679
+Epoch 5/5
+549367/549367 [==============================] - 689s - loss: 0.6229 - acc: 0.7439 - val_loss: 0.5649 - val_acc: 0.7694
+Saving to /home/ubuntu/anaconda2/lib/python2.7/site-packages/spacy/data/en/similarity
+

@@ -1,0 +1,51 @@
+commands.txt
+
+:Author: cinc
+:Email: cinc@Ubuntu2016
+:Date: 2017-05-10 20:20
+
+pip install spacy
+wget https://github.com/explosion/spaCy/archive/master.zip
+unzip master.zip 
+mv spaCy-master/examples/keras_parikh_entailment/* .
+
+cd workspace.bit/fastai_deep_learning/nbs_root/examples
+py.test keras_parikh_entailment/keras_decomposable_attention.py
+
+
+test on snli
+---------------
+mkdir -p /cinc/data/snli/download
+cd       /cinc/data/snli/download
+wget https://nlp.stanford.edu/projects/snli/snli_1.0.zip
+unzip snli_1.0.zip
+
+/cinc/data/snli/save_data/model
+
+mkdir /cinc/data/snli/train
+mkdir /cinc/data/snli/dev
+cp snli_1.0/snli_1.0_train.* /cinc/data/snli/train
+cp snli_1.0/snli_1.0_dev.* /cinc/data/snli/dev/
+
+head -100 snli_1.0_train.jsonl > ../../train_100/snli_1.0_train.jsonl
+head -101 snli_1.0_train.txt   > ../../train_100/snli_1.0_train.txt
+head -100 snli_1.0_dev.jsonl   > ../../dev_100/snli_1.0_dev.jsonl
+head -101 snli_1.0_dev.txt     > ../../dev_100/snli_1.0_dev.txt
+head -100 snli_1.0_test.jsonl  > ../../test_100/snli_1.0_test.jsonl
+head -101 snli_1.0_test.txt    > ../../test_100/snli_1.0_test.txt
+
+
+mkdir /cinc/data/snli/train_1000
+mkdir /cinc/data/snli/dev_1000
+mkdir /cinc/data/snli/test_1000
+
+head -1000 snli_1.0_train.jsonl > ../../train_1000/snli_1.0_train.jsonl
+head -1001 snli_1.0_train.txt   > ../../train_1000/snli_1.0_train.txt
+head -1000 snli_1.0_dev.jsonl   > ../../dev_1000/snli_1.0_dev.jsonl
+head -1001 snli_1.0_dev.txt     > ../../dev_1000/snli_1.0_dev.txt
+head -1000 snli_1.0_test.jsonl  > ../../test_1000/snli_1.0_test.jsonl
+head -1001 snli_1.0_test.txt    > ../../test_1000/snli_1.0_test.txt
+
+
+python keras_parikh_entailment/ train /cinc/data/snli/train/snli_1.0_train.jsonl /cinc/data/snli/dev/snli_1.0_dev.jsonl
+
