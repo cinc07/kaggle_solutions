@@ -1,3 +1,7 @@
+Solutions to Kaggle quora-question-pairs Competition
+
+| File | Description |
+| --- | --- |
 | quora_1.ipynb | pre-processing |
 | quora_feature_engineering.ipynb | 	Solution using feature engineering |
 | quora_glove_lstm_keras2_cv.ipynb | 	Solution using Deep Learning LSTM, glove word embedding |

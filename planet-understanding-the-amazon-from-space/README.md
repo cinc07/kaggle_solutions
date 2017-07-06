@@ -1,4 +1,4 @@
-Solutions to Kaggles planet-understanding-the-amazon-from-space Competition
+Solutions to Kaggle planet-understanding-the-amazon-from-space Competition
 
 
 | File | Description |
