@@ -1,6 +1,6 @@
 My solutions to Kaggles Competitions.
 
-My Kaggles Profile:
+- My Kaggles Profile:
 https://www.kaggle.com/cinc07
 
 Technologies:
